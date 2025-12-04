@@ -13,8 +13,9 @@
 
 <body>
 
+
     <div class="row header">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-sm-3">
             <nav class="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
@@ -25,9 +26,36 @@
             </nav>
         </div>
 
-        <div class="col-12 col-md-7 d-flex justify-content-end align-items-center gap-2">
-            <button type="button" class="btn btn-success btn-sm ">Create a new post</button>
-        
+        <div class="col-12 col-sm-9 d-flex justify-content-end align-items-center gap-2">
+            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
+                data-bs-target="#createNewPostModal">Create a new post</button>
+            <div class="modal fade" id="createNewPostModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="mb-3 cuadro-de-texto">
+                            <label for="postText" class="form-label">Caption:</label>
+                            <textarea class="form-control" id="postText" rows="4"
+                                placeholder="Add the caption of your post here"></textarea>
+                        </div>
+
+                        <div class="row icons-modal">
+                            <div class="col-auto"><button class="camera-icon"><i class="bi bi-camera-fill"></i></div>
+                            </button>
+                            <div class="col-auto location-icon"><button class="location-icon"><i
+                                        class="bi bi-geo-alt"></i></button></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <ul class="nav nav-tabs">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -62,58 +90,156 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
             tabindex="0">
             <div class="row g-2 g-sm-3 g-md-4 gallery">
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://i.pinimg.com/originals/8c/36/e4/8c36e4e957b455782e48d580b671e600.jpg"
-                        class="img-fluid img-water" alt="water picture"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/06/fotos-chulas-verano.jpg"
-                        class="img-fluid img-camera" alt="camera and flowers"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/03/primavera.jpg"
-                        class="img-fluid img-flor" alt="flowers"></div>
-            </div>
 
-            <div class="row g-2 g-sm-3 g-md-4 gallery">
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://i.pinimg.com/originals/8c/36/e4/8c36e4e957b455782e48d580b671e600.jpg"
-                        class="img-fluid img-water" alt="water picture"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/06/fotos-chulas-verano.jpg"
-                        class="img-fluid img-camera" alt="camera and flowers"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/03/primavera.jpg"
-                        class="img-fluid img-flor" alt="flowers"></div>
-            </div>
 
-            <div class="row g-2 g-sm-3 g-md-4 gallery">
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://i.pinimg.com/originals/8c/36/e4/8c36e4e957b455782e48d580b671e600.jpg"
-                        class="img-fluid img-water" alt="water picture"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/06/fotos-chulas-verano.jpg"
-                        class="img-fluid img-camera" alt="camera and flowers"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
-                        src="https://www.buscandositioschulos.com/wp-content/uploads/2021/03/primavera.jpg"
-                        class="img-fluid img-flor" alt="flowers"></div>
-            </div>
 
-            <div class="row g-2 g-sm-3 g-md-4 gallery">
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://static.independent.co.uk/2021/04/08/09/GettyImages-1306560433.jpg"
+                        class="img-fluid img-camera" alt="camera and flowers"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://www.diez.hn/binrepository/1200x676/0c0/0d0/none/3014757/WYLH/Chilena.4_DZ444608_MG342713034.jpg"
+                        class="img-fluid img-flor" alt="flowers"></div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://th.bing.com/th/id/R.2faa10f87b765a4a6fdc5f686216a8a7?rik=IiEttnFgflqi3g&riu=http%3a%2f%2ffondosmil.co%2ffondo%2f52739.jpg&ehk=Msz7nVxs2FWsX%2fHBvJ9spGmc9DYSh9Pez1iKwyMN6jU%3d&risl=&pid=ImgRaw&r=0"
+                        class="img-fluid img-water" alt="water picture"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://images.hdqwalls.com/download/stranger-things-2020-q9-3840x2400.jpg"
+                        class="img-fluid img-camera" alt="camera and flowers"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://cdn-l-cyberpunk.cdprojektred.com/cyberpunk2077/nightcity/Cyberpunk2077_Immerse_Yourself_RGB@1x.jpg"
+                        class="img-fluid img-flor" alt="flowers"></div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/2b117db6108244a85769f8009df39f8006b226d8a2831b3a.jpg"
+                        class="img-fluid img-water" alt="water picture"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/battlefield.jpg"
+                        class="img-fluid img-camera" alt="camera and flowers"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://th.bing.com/th/id/R.1b9eb58dda3dff0853a40e1b139326eb?rik=lfbLIE4dvtDgEA&pid=ImgRaw&r=0"
+                        class="img-fluid img-flor" alt="flowers"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
+                        src="https://tse2.mm.bing.net/th/id/OIP.bffEbU-oKolCdEvR53NlnwHaK0?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        class="img-fluid img-water" alt="water picture"></div>
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
                         src="https://i.pinimg.com/originals/8c/36/e4/8c36e4e957b455782e48d580b671e600.jpg"
                         class="img-fluid img-water" alt="water picture"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
                         src="https://www.buscandositioschulos.com/wp-content/uploads/2021/06/fotos-chulas-verano.jpg"
                         class="img-fluid img-camera" alt="camera and flowers"></div>
-                <div class="col-12 col-sm-6 col-md-4 mb-2 mb-sm-3 mb-md-4"><img
+                <div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-1 mb-md-2"><img
                         src="https://www.buscandositioschulos.com/wp-content/uploads/2021/03/primavera.jpg"
                         class="img-fluid img-flor" alt="flowers"></div>
             </div>
         </div>
-    
 
 
         <div class="d-flex flex-column align-items-center feed-posts fade" id="profile-tab-pane" role="tabpanel"
             aria-labelledby="profile-tab" tabindex="0">
+
+            
+            
+            
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://static.independent.co.uk/2021/04/08/09/GettyImages-1306560433.jpg" class="img-flor"
+                    alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://www.diez.hn/binrepository/1200x676/0c0/0d0/none/3014757/WYLH/Chilena.4_DZ444608_MG342713034.jpg" class="img-flor"
+                    alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://th.bing.com/th/id/R.2faa10f87b765a4a6fdc5f686216a8a7?rik=IiEttnFgflqi3g&riu=http%3a%2f%2ffondosmil.co%2ffondo%2f52739.jpg&ehk=Msz7nVxs2FWsX%2fHBvJ9spGmc9DYSh9Pez1iKwyMN6jU%3d&risl=&pid=ImgRaw&r=0"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://images.hdqwalls.com/download/stranger-things-2020-q9-3840x2400.jpg" class="img-flor"
+                    alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://cdn-l-cyberpunk.cdprojektred.com/cyberpunk2077/nightcity/Cyberpunk2077_Immerse_Yourself_RGB@1x.jpg"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/2b117db6108244a85769f8009df39f8006b226d8a2831b3a.jpg"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/battlefield.jpg"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://th.bing.com/th/id/R.1b9eb58dda3dff0853a40e1b139326eb?rik=lfbLIE4dvtDgEA&pid=ImgRaw&r=0"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem;">
+                <h5 class="card-title">Card title</h5>
+                <img src="https://tse2.mm.bing.net/th/id/OIP.bffEbU-oKolCdEvR53NlnwHaK0?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="img-flor" alt="flowers">
+                <div class="card-body">
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+
+                </div>
+            </div>
             <div class="card mb-5" style="width: 25rem;">
                 <h5 class="card-title">Card title</h5>
                 <img src="https://i.pinimg.com/originals/8c/36/e4/8c36e4e957b455782e48d580b671e600.jpg"
@@ -147,7 +273,8 @@
                         card’s content.</p>
 
                 </div>
-            </div>
+              </div>      
+
 
         </div>
     </div>
@@ -157,9 +284,9 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
